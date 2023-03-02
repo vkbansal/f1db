@@ -1,0 +1,22 @@
+{
+  "name": "f1db",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": "true",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "mongodb": "^5.1.0",
+    "papaparse": "^5.3.2",
+    "zx": "^7.1.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.4"
+  }
+}

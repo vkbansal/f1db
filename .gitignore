@@ -1,0 +1,12 @@
+node_modules
+*.journal
+*.log
+build
+temp
+tmp
+.DS_Store
+.env
+temp.*
+public
+f1db.sql.gz
+f1db_csv.zip
