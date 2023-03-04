@@ -1,5 +1,4 @@
 module.exports = {
-	plugins: [require.resolve('prettier-plugin-astro')],
 	printWidth: 100,
 	tabWidth: 2,
 	useTabs: true,
@@ -15,12 +14,6 @@ module.exports = {
 				tabWidth: 2,
 				useTabs: false,
 			},
-		},
-		{
-			files: ['*.astro'],
-			options: {
-				parser: 'astro',
-			},
-		},
+		}
 	],
 };

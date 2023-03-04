@@ -1,0 +1,46 @@
+export const Collections = {
+	Circuits: 'circuits',
+	ConstructorResults: 'constructor_results',
+	ConstructorStandings: 'constructor_standings',
+	ConstructorStandingsFinal: 'constructor_standings_final',
+	Constructors: 'constructors',
+	DriverStandings: 'driver_standings',
+	DriverStandingsFinal: 'driver_standings_final',
+	Drivers: 'drivers',
+	LapTimes: 'lap_times',
+	PitStops: 'pit_stops',
+	Qualifying: 'qualifying',
+	Races: 'races',
+	Results: 'results',
+	Seasons: 'seasons',
+	SprintResults: 'sprint_results',
+	Status: 'status',
+};
+
+export const Indexes = {
+	[Collections.Circuits]: [
+		[{ circuitId: 1 }, { unique: true }],
+		[{ circuitRef: 1 }, { unique: true }],
+	],
+	[Collections.ConstructorResults]: [[{ constructorResultsId: 1 }, { unique: true }]],
+	[Collections.ConstructorStandings]: [[{ constructorStandingsId: 1 }, { unique: true }]],
+	[Collections.ConstructorStandingsFinal]: [],
+	[Collections.Constructors]: [
+		[{ constructorId: 1 }, { unique: true }],
+		[{ constructorRef: 1 }, { unique: true }],
+	],
+	[Collections.DriverStandings]: [[{ driverStandingsId: 1 }, { unique: true }]],
+	[Collections.DriverStandingsFinal]: [],
+	[Collections.Drivers]: [
+		[{ driverId: 1 }, { unique: true }],
+		[{ driverRef: 1 }, { unique: true }],
+	],
+	[Collections.LapTimes]: [],
+	[Collections.PitStops]: [],
+	[Collections.Qualifying]: [[{ qualifyId: 1 }, { unique: true }]],
+	[Collections.Races]: [[{ raceId: 1 }, { unique: true }]],
+	[Collections.Results]: [[{ resultId: 1 }, { unique: true }]],
+	[Collections.Seasons]: [[{ year: 1 }, { unique: true }]],
+	[Collections.SprintResults]: [[{ resultId: 1 }, { unique: true }]],
+	[Collections.Status]: [[{ statusId: 1 }, { unique: true }]],
+};
