@@ -10,7 +10,7 @@ import { SingleBar, Presets } from 'cli-progress';
 
 import { Indexes } from './utils.mjs';
 
-const BATCH_SIZE = 50;
+const BATCH_SIZE = 500;
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DB_PATH = path.resolve(process.cwd(), 'f1db');
 const files = await fs.promises.readdir(DB_PATH);
@@ -71,7 +71,7 @@ for (const file of files) {
 		const batchData = data.slice(start, next);
 
 		await collection.insertMany(batchData);
-		bar.update(next);
+		bar.update(Math.min(next, data.length));
 
 		start = next;
 	}

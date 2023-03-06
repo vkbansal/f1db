@@ -74,6 +74,33 @@ await db
 	])
 	.toArray();
 
-await mongoClient.close(true);
+console.log('Teams...');
+await db
+	.collection(Collections.Results)
+	.aggregate([
+		{
+			$lookup: {
+				from: Collections.Races,
+				as: 'race',
+				localField: 'raceId',
+				foreignField: 'raceId',
+			},
+		},
+		{ $unwind: { path: '$race' } },
+		{
+			$group: {
+				_id: { driverId: '$driverId', constructorId: '$constructorId', year: '$race.year' },
+			},
+		},
+		{
+			$replaceRoot: { newRoot: '$_id' },
+		},
+		{
+			$out: Collections.Teams,
+		},
+	])
+	.toArray();
 
+console.log('Closing connection...');
+await mongoClient.close(true);
 process.exit(0);

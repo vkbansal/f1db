@@ -15,6 +15,7 @@ export const Collections = {
 	Seasons: 'seasons',
 	SprintResults: 'sprint_results',
 	Status: 'status',
+	Teams: 'teams',
 };
 
 export const Indexes = {
